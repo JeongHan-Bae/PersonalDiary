@@ -27,6 +27,28 @@ The project follows a hexagonal architecture with Vue as the presentation layer.
   </p>
 </blockquote>
 
+<div align="center">
+    <img src="https://raw.githubusercontent.com/JeongHan-Bae/PersonalDiary/main/public/assets/Logo.svg"
+         alt="Personal Diary logo"
+         width="192">
+</div>
+
+## Data Ownership And Transparency
+
+Personal Diary has no backend service and does not encrypt diary data. It is a browser GUI for user-owned plaintext
+data, not a hosted storage platform or a security boundary.
+
+The diary data itself always belongs to the user. During normal use, the browser is the runtime persistence layer through
+IndexedDB. JSON is only the readable export and restore protocol for backup, transfer, and rebuilding IndexedDB state.
+
+The project uses UUIDs directly as local record IDs and does not separate business IDs from storage IDs. This keeps the
+data easy to inspect, move, transform, and reuse with other tools, including AI agents that render or process the
+exported JSON in different ways.
+
+The goal is convenience: turning diary writing and personal data management from a higher-friction workflow, such as
+platform-bound apps or manual Office/HTML files, into a simple browser-based GUI while keeping ownership and control
+with the user.
+
 ## Project Structure
 
 ### `src/app`
