@@ -1,0 +1,65 @@
+name: Build and Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '*.ts'
+      - '*.css'
+      - '*.vue'
+      - '*.html'
+      - '**/*.ts'
+      - '**/*.css'
+      - '**/*.vue'
+      - '**/*.html'
+      - '.github/workflows/deploy.yml'
+      - 'package.json'
+      - 'package-lock.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "deploy"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to deploy
+        env:
+          DEPLOY_BRANCH: deploy
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          publish_dir="$(mktemp -d)"
+          cp -R dist/. "${publish_dir}/"
+          touch "${publish_dir}/.nojekyll"
+
+          cd "${publish_dir}"
+          git init --initial-branch="${DEPLOY_BRANCH}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "deploy: update site for ${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin "HEAD:${DEPLOY_BRANCH}"
