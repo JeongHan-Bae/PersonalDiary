@@ -62,7 +62,7 @@ export const HELP_CONTENT: HelpContentViewModel = {
     paragraphs: [
       'Use this Diary to create entries, track mood and energy, manage local users, and keep avatar assets with your private data.',
       'Create or switch local users from User, write entries from New Diary, filter entries from the bottom controls, and use JSON import/export to back up, restore, or move your data.',
-      'Import reconciles current state by UUID and updated time. Duplicate entries, users, and avatar assets keep the latest updated record.',
+      'Import reconciles current state by UUID and updated time. Duplicate entries, tags, users, and avatar assets keep the latest updated record.',
       'If one duplicate entry is deleted and another is not, the latest updated record wins. When the deleted record is newer, the current state remains deleted.',
       'Deletion is a content behavior, not physical removal.',
       'Merging user B into user A keeps A as the target identity, so B does not overwrite A non-avatar profile fields. The merged avatar uses the avatar asset with the latest updated time.',
