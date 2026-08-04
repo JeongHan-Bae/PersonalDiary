@@ -1,0 +1,32 @@
+.profile-action-button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.profile-json-action-button {
+  container-type: inline-size;
+}
+
+.profile-json-action-label {
+  font-size: min(0.875rem, calc(100cqw / 8.4));
+}
+
+.mobile-range-control-grid {
+  grid-template-columns: minmax(0, 2fr) minmax(max-content, 1fr);
+}
+
+.mobile-range-editor {
+  bottom: 18%;
+}
+
+.date-range-input-grid {
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+}
+
+.cookie-consent-panel {
+  max-width: 420px;
+}

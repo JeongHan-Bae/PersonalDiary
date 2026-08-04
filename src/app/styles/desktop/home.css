@@ -1,0 +1,146 @@
+.desktop-home-nav {
+  height: 10%;
+}
+
+.desktop-home-content {
+  gap: 2%;
+  height: 90%;
+  padding: 2%;
+}
+
+.desktop-profile-panel {
+  overflow: hidden;
+  width: 22%;
+}
+
+.desktop-profile-identity {
+  display: flex;
+  min-height: 0;
+  flex: 0 1 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.125rem, 0.8dvh, 0.75rem);
+}
+
+.desktop-profile-avatar {
+  aspect-ratio: 1;
+  flex: 0 1 auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: min(68%, clamp(6rem, 23dvh, 14rem));
+}
+
+.desktop-profile-text {
+  display: flex;
+  max-width: 100%;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.125rem, 0.45dvh, 0.35rem);
+}
+
+.desktop-profile-name {
+  max-width: 100%;
+  flex: 0 0 auto;
+  overflow-wrap: anywhere;
+  line-height: 1.12;
+}
+
+.desktop-profile-pronouns {
+  flex: 0 0 auto;
+  line-height: 1.25;
+  background-color: transparent;
+}
+
+.desktop-profile-status {
+  flex: 0 1 auto;
+  margin-top: clamp(0.5rem, 1.2dvh, 0.75rem);
+}
+
+.desktop-profile-bio {
+  flex: 0 1 auto;
+  min-height: 2.75rem;
+  margin-top: clamp(0.75rem, 1.8dvh, 1.25rem);
+  overflow-y: auto;
+}
+
+.desktop-profile-actions {
+  flex: 0 0 auto;
+  margin-top: auto;
+  padding-top: clamp(0.75rem, 1.8dvh, 1.25rem);
+}
+
+.desktop-home-main {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+}
+
+.desktop-home-main-header {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.desktop-home-diary-body {
+  grid-template-columns: minmax(0, 1fr) 340px;
+  margin-top: 3%;
+  padding-bottom: 2%;
+}
+
+.desktop-home-panel-scroll {
+  margin-right: -0.75rem;
+  padding-right: 1rem;
+}
+
+.desktop-home-diary-notebook-scroll {
+  --scrollbar-thumb-color: var(--color-panel-strong);
+}
+
+.desktop-home-level-filter-grid {
+  grid-template-columns: 92px minmax(0, 1fr);
+}
+
+.desktop-user-menu-button-label {
+  display: -webkit-box;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: normal;
+}
+
+.desktop-home-overlay {
+  padding: 3%;
+}
+
+.desktop-draft-modal {
+  height: 78dvh;
+  width: 76dvw;
+}
+
+.desktop-draft-modal-side {
+  width: 34%;
+}
+
+.desktop-diary-body-textarea {
+  height: 12rem;
+}
+
+.desktop-help-modal {
+  max-height: 80dvh;
+  width: 520px;
+}
+
+.desktop-help-logo {
+  right: 2.5%;
+}
+
+.desktop-user-action-modal {
+  max-height: 78dvh;
+  width: 64dvw;
+}
+
+.desktop-confirmation-modal {
+  width: 420px;
+}

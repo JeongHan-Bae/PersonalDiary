@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-app: 220 209 194;
+  --color-surface: 247 242 234;
+  --color-panel: 255 255 255;
+  --color-panel-muted: 239 229 216;
+  --color-panel-strong: 32 32 30;
+  --color-profile-surface: 239 229 216;
+  --color-main: 255 255 255;
+  --color-main-text: 22 22 22;
+  --color-main-body-text: 104 91 80;
+  --color-main-muted-text: 124 110 97;
+  --color-title-text: 22 22 22;
+  --color-body-text: 104 91 80;
+  --color-muted-text: 124 110 97;
+  --color-inverse-text: 255 255 255;
+  --color-accent: 185 130 93;
+  --color-level-good: 61 139 92;
+  --color-level-neutral: 198 158 70;
+  --color-level-bad: 190 70 61;
+  --color-danger: 181 54 45;
+  --color-danger-surface: 255 238 236;
+  --color-border-base: 203 189 171;
+  --color-nav-surface: 247 242 234;
+  --color-avatar-border: 185 130 93;
+  --color-nav-avatar-surface: 236 225 211;
+  --color-profile-avatar-surface: 228 214 196;
+  --color-mask-background: 255 255 255;
+  --color-mask-subject: 0 0 0;
+  color: rgb(var(--color-title-text));
+  background: rgb(var(--color-app));
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  --scrollbar-thumb-color: var(--color-panel);
+  scrollbar-color: rgb(var(--scrollbar-thumb-color) / 0.7) transparent;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 3px solid rgb(var(--scrollbar-thumb-color));
+  border-radius: 999px;
+  background: rgb(var(--scrollbar-thumb-color) / 0.7);
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

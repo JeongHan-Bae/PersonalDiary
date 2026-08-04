@@ -1,0 +1,49 @@
+.mobile-home-filter-dock {
+  touch-action: manipulation;
+}
+
+.mobile-user-menu {
+  top: calc(100% + 0.5rem);
+}
+
+.mobile-profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.mobile-profile-avatar {
+  flex: 0 0 auto;
+}
+
+.mobile-user-menu-button-label {
+  display: -webkit-box;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: normal;
+}
+
+.mobile-profile-name,
+.mobile-profile-pronouns {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  word-break: normal;
+}
+
+.mobile-draft-modal {
+  max-height: 88dvh;
+}
+
+.mobile-user-action-modal {
+  max-height: 86dvh;
+}
+
+.mobile-help-modal {
+  max-height: 80dvh;
+}
